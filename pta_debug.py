@@ -4,9 +4,8 @@ import json
 from save.save_manager import ensure_save_dir_exists
 from menu_logic.menu import main_menu
 from game_state.init_load import init_load
-from commands import handle_command
+from commands import handle_debug_command
 from settings.text import type_text
-
 
 if __name__ == "__main__":
     ensure_save_dir_exists()
@@ -22,7 +21,7 @@ if __name__ == "__main__":
         while running:
             print(" ")
             command = input("> ")
-            running, player_data = handle_command(command, player_data)
+            running, player_data = handle_debug_command(command, player_data)
 
 """
 This file is part of the Pokemon-Text-Adventure package.
